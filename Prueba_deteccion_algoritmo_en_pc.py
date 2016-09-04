@@ -62,9 +62,5 @@ if empezar == '1':
          break
 else:
   print ("Opcion invalida")
-  #Las siguientes lineas esperan a que se presione la tecla esc para terminar el programa
-  tecla = cv2.waitKey(5) & 0xFF
-  if tecla == 27:
-  break
  
 cv2.destroyAllWindows()
