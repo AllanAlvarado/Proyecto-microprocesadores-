@@ -45,21 +45,17 @@ if empezar == '1':
          
           #Si el área es verde se realiza un giro a la derecha
           print ("Gire a la derecha")
+          cv2.imshow('mascara', mask1)
           
       elif(area1 < area2):
       
           #Si el área es roja se realiza un giro a la izquierda
           print ("Gire a la izquierda")
-          
+          cv2.imshow('mascara', mask2)
       else:
           
           #Si no se determina que area es más grande hubo un error en el programa
           print ("Error en el procesamiento de la imagen")
-      
-     #Aqui se puede mostrar la imagen de momento queda comentado para
-     #ver si es necesario o no realizarlo
-     #cv2.imshow('mask', mask)
-     #cv2.imshow('Camara', imagen)
      #Las siguientes lineas esperan a que se presione la tecla esc para terminar el programa
      tecla = cv2.waitKey(5) & 0xFF
      if tecla == 27:
