@@ -2,7 +2,7 @@
 #
 #
 #
-#Detecta flecha verde para giro derecho y flecha roja para giro izquierdo 
+#Detecta flecha verde para giro derecho y flecha azul para giro izquierdo 
  
 import cv2
 import numpy as np
@@ -22,16 +22,16 @@ if empezar == '1':
    
       #Establecemos el rango de colores que vamos a detectar
       #Verde oscuro a verde claro
-      #Rojo oscuro a rojo claro 
+      #azul oscuro a azul claro 
       verde_bajos = np.array([49,50,50], dtype=np.uint8)
       verde_altos = np.array([80, 255, 255], dtype=np.uint8)
-      rojo_bajos = np.array([0,50,50], dtype=np.uint8)
-      rojo_altos = np.array([0, 255, 255], dtype=np.uint8)
+      azul_bajos = np.array([100,65,75], dtype=np.uint8)
+      azul_altos = np.array([130, 255, 255], dtype=np.uint8)
       
      #Crear una mascara con solo los pixeles dentro del rango de verdes
-     #y crear una mascara con solo los pixeles dentro del rango de rojos
+     #y crear una mascara con solo los pixeles dentro del rango de azules
       mask1 = cv2.inRange(hsv, verde_bajos, verde_altos)
-      mask2 = cv2.inRange(hsv, rojo_bajos, rojo_altos)
+      mask2 = cv2.inRange(hsv, azul_bajos, azul_altos)
  
      #Encontrar el area de los objetos que detecta la camara
      moments1 = cv2.moments(mask1)
