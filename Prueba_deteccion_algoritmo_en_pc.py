@@ -1,6 +1,6 @@
 #Algoritmo de deteccion de las flechas según su color
-#
-#
+#El programa se ejecuta y para finalizarlo se utiliza la tecla esc
+#hay q iniciarlo de nuevo cada vez que se quiera analizar una flecha
 #
 #Detecta flecha verde para giro derecho y flecha azul para giro izquierdo 
  
