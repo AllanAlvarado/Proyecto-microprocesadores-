@@ -45,13 +45,13 @@ if empezar == '1':
          
           #Si el área es verde se realiza un giro a la derecha
           print ("Gire a la derecha")
-          cv2.imshow('mascara', mask1)
+    
           
       elif(area1 < area2):
       
           #Si el área es roja se realiza un giro a la izquierda
           print ("Gire a la izquierda")
-          cv2.imshow('mascara', mask2)
+         
       else:
           
           #Si no se determina que area es más grande hubo un error en el programa
